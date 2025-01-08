@@ -1,9 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width: device-width; scale: 1.0;">
-  <link rel="stylesheet" href="IniOp.css">
+  <link rel="stylesheet" href="iniOp.css">
+  <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            if (menu.style.height === '90px') {
+                menu.style.height = '0';
+            } else {
+                menu.style.height = '90px';
+            }
+        }
+        function changeTheme(theme) {
+            if (theme === 'dark') {
+                document.documentElement.style.setProperty('--primary-bg-color', 'black');
+                document.documentElement.style.setProperty('--primary-text-color', 'white');
+            } else {
+                document.documentElement.style.setProperty('--primary-bg-color', 'white');
+                document.documentElement.style.setProperty('--primary-text-color', 'black');
+            }
+        }
+          
+    </script>
     </head>
   <body>
     <!-- Navbar with burger menu and theme switch -->
