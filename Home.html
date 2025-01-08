@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width: device-width; scale: 1.0;">
+  <link rel="stylesheet" href="iniOp.css">
+  <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            if (menu.style.height === '90px') {
+                menu.style.height = '0';
+            } else {
+                menu.style.height = '90px';
+            }
+        }
+        function changeTheme(theme) {
+            if (theme === 'dark') {
+                document.documentElement.style.setProperty('--primary-bg-color', 'black');
+                document.documentElement.style.setProperty('--primary-text-color', 'white');
+            } else {
+                document.documentElement.style.setProperty('--primary-bg-color', 'white');
+                document.documentElement.style.setProperty('--primary-text-color', 'black');
+            }
+        }
+          
+    </script>
+    </head>
+  <body>
+    <!-- Navbar with burger menu and theme switch -->
+    <nav id="navbar" class="nav">
+        <div id="menu-button" class="burger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul id="menu" class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="About.html">About this phone</a></li>
+        </ul>
+        <div class="theme-switch">
+            <input type="checkbox" id="theme-toggle">
+            <label for="theme-toggle" class="slider"></label>
+        </div>
+    </nav>
+   <div class="header-text"> News </div>
+   
+   <div id="img"class="phone-image"><a href="About.html"><img alt="Mi 11 Ultra"src="mi11ultra.jpg" width="80% aspect-ratio="1/1"></a>
+   <p align-contents="justify">Mi 11 Ultra specification leaks</p>
+   </div>
+   
+<div id="img"class="phone-image"><a href="About.html"><img alt="Mi 11 Ultra"src="mi11ultra.jpg" width=80% aspect-ratio="1/1"></a>
+   <p id="caption">Mi 11 Ultra specification leaks</p>
+   </div>
+   
+    
+    <div id="img"class="phone-image"><a href="About.html"><img alt="Mi 11 Ultra"src="mi11ultra.jpg" width=80% aspect-ratio="1/1"></a>
+   <p>Mi 11 Ultra specification leaks</p>
+   </div>
+    
+    <script src = "Skripkode.js"></script>
+  </body>
+</html>

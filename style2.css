@@ -1,0 +1,332 @@
+/* Global Styles */
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for theme switch */
+}
+/* tulisan/text content */
+.par {
+    text-align: right;
+    padding: 520px 200px 0 0;
+    color: #ffffff;
+}
+/* Navbar */
+.nav {
+    position: static;
+    display: flex;
+    z-index: 2;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 4rem; /* Better spacing for navbar */
+    background-color: var(--navbar-bg);
+    box-shadow: 0 10px 4px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 20px;
+    padding-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--navbar-text-color);
+    font-size: 1.2rem;
+    align-items: center;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Theme Toggle Switch */
+.theme-switch {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.slider {
+    width: 33px;
+    height: 18px;
+    background-color: #ccc;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* Sembunyikan checkbox */
+.theme-switch input[type="checkbox"] {
+  display: none; /* Hilangkan dari tampilan */
+}
+
+/* Gaya slider tetap terlihat */
+.slider {
+  width: 33px;
+  height: 18px;
+  background-color: #ccc;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 2px solid #888; /* Tambahkan border */
+}
+
+/* Lingkaran slider */
+.slider::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  top: 1.5px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+
+/* Warna dan posisi lingkaran saat aktif (checked) */
+input[type="checkbox"]:checked + .slider {
+  background-color: var(--slider-active-bg);
+}
+
+input[type="checkbox"]:checked + .slider::before {
+  transform: translateX(15px);
+}
+/* Sembunyikan checkbox */
+.theme-switch input[type="checkbox"] {
+    display: none; /* Hilangkan dari tampilan */
+  }
+  
+  /* Gaya slider tetap terlihat */
+  .slider {
+    width: 33px;
+    height: 18px;
+    background-color: #ccc;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /*/* Lingkaran slider */
+  .slider::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    top: 1.5px;
+    left: 2px;
+    transition: transform 0.3s ease;
+  } 
+  
+/* Warna dan posisi lingkaran saat aktif (checked) */
+input[type="checkbox"]:checked + .slider {
+    background-color: var(--slider-active-bg);
+  }
+  
+input[type="checkbox"]:checked + .slider::before {
+    transform: translateX(15px);
+  }
+  
+input[type="checkbox"]:checked + .slider {
+    background-color: var(--slider-active-bg); /* Add active background color for slider */
+}  
+
+.slider::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    top: 1.5px; /* Better alignment */
+    left: 2px;
+    transition: 0.3s ease;
+}
+
+input[type="checkbox"]:checked + .slider::before {
+    transform: translateX(15px); /* Smooth toggle movement */
+} 
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.8em;
+    font-style: italic;
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    margin-top: 2rem;
+    border-top: 1px solid var(--footer-border-color); /* Optional: Add border for separation */
+}
+
+/* Container untuk video */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Tinggi penuh viewport */
+    overflow: hidden;
+  }
+  
+  /* Video background */
+  .video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Kirim video ke belakang */
+  }
+
+  /* Overlay Konten */
+.content-overlay {
+    position: relative;
+    z-index: 1; /* Pastikan konten di atas video */
+  }
+  
+/* Video Konten (overlay video) */
+/* Kontainer untuk video di dalam overlay */
+
+/* Box untuk video kedua */
+.vid {
+  position: flex;
+  padding: 0 0 0 0;
+  width: 100%;
+  height: 100%;
+} 
+.vidboxx {
+  display: inline-flex;
+  position: relative;
+  top: 120px;
+  z-index: 1;
+  left: 200px;
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  border: 2px solid #ccc; 
+}
+
+/* Tombol Fullscreen */
+.fullscreen-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fullscreen-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.box {
+  margin: 70px 10px 10px 10px;
+  justify-self: center;
+  align-self: center;
+  padding: 20px 10px 10px 60px;
+  width: 1200px ;
+  height: 700px ;
+  background-color: white;
+  transition: transform 0.3s, background-color 0.3s;
+  border: 1.2px solid white ;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.box:hover {
+  transform: scale(1.02); /* Perbesar saat hover */
+}
+
+/* Container untuk slideshow */
+.slideshow-container {
+  position: relative;
+  width: 100%; /* Lebar penuh parent */
+  max-width: 290px; /* Maksimal lebar */
+  /* max-height: 500px; */
+  margin: auto; /* Tengah */
+  overflow: hidden; /* Sembunyikan gambar yang keluar */
+  transition: transform 0.5s ease; /* Transisi untuk scrolling */
+  border: 2px solid #ccc; /* Opsional: border */
+  border-radius: 5px; /* Opsional: sudut melengkung */
+  
+}
+
+/* Slide */
+.slide {
+  display: flex; /* Tata letak horizontal */
+  width: 100%; /* Default lebar */
+  transition: transform 0.5s ease-in-out; /* Transisi pergeseran */
+}
+
+/* Gambar */
+.slide img {
+  width: 100%; /* Setiap gambar memenuhi countainer */
+  height: auto; /* Tinggi auto untuk setiap gambar */
+  object-fit: cover; /* Gambar memenuhi kotak tanpa keluar */
+  
+}
+
+/* Tampilkan slide pertama secara default */
+.slide:first-child {
+  transform: translateX(0); /* Posisi slide pertama */
+}
+
+
+
+
+/* Dark Mode */
+body.dark-mode .box {
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+body.dark-mode .nav {
+    background-color: black;
+}
+
+body.dark-mode .nav-links a {
+    color: white;
+}
+.nav-links a:hover {
+  transform: scale(1.1);
+  color: #525252; /* Hover color for light mode */
+}
+body.dark-mode .nav-links a:hover {
+  transform: scale(1.1);
+  color: #bbb; /* Hover color for dark mode */
+}
+
+body.dark-mode footer {
+    background-color: black;
+    color: #ccc;
+    border-top-color: #555;
+}
+
+
